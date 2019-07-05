@@ -1,0 +1,82 @@
+body {
+    background-color: #FFD700;
+}
+
+.item-a {
+    grid-area: header;
+}
+
+.item-b {
+    grid-area: dataToJson;
+}
+
+.item-c {
+    grid-area: output;
+}
+
+.item-d {
+    grid-area: image;
+}
+
+
+.container {
+    display: grid; /*Defines the container as a grid */
+    grid-template-areas:
+            "header header"
+            "dataToJson dataToJson"
+            "output output"
+            "image image";
+    grid-gap: 10px;
+    background-color: burlywood;
+    border: 15px solid burlywood;
+    margin-top: 2.5%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.container > div {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.item-a {
+    text-align: center;
+    font-size: 28px;
+}
+
+.item-b {
+    text-align: center;
+}
+
+.item-b input{
+    font-size: 16px;
+}
+
+
+
+.item-c {
+    text-align: center;
+    font-size: 20px;
+}
+
+.item-d {
+    text-align: center;
+}
+
+.item-d img {
+    width: 250px;
+    height: 250px;
+}
+
+.item-c hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#submit_handle {
+    display: none;
+}
+
+
+
