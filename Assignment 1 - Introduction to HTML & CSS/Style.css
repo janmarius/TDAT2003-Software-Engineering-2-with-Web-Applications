@@ -1,0 +1,133 @@
+body {
+    background-image: url("sky.jpg");
+    background-size: cover;
+}
+
+
+.item-a {
+    grid-area: header;
+}
+.item-b {
+    grid-area: menu;
+}
+.item.c {
+    grid-area: text;
+}
+.item-d {
+    grid-area: image;
+}
+.item-e {
+    grid-area: footer;
+}
+
+
+@media (min-width: 971px) {
+    .container {
+        display: grid; /*Defines the container as a grid */
+        grid-template-areas:
+                "header header header header header"
+                "menu text text image image"
+                "menu footer footer footer footer";
+        grid-gap: 10px;
+        background-color: burlywood;
+        border: 15px solid burlywood;
+        margin: 5%;
+    }
+}
+
+
+@media (max-width: 970px) {
+    .container {
+        display: grid; /*Defines the container as a grid */
+        grid-template-areas:
+                "header"
+                "menu"
+                "text"
+                "image"
+                "footer";
+        grid-gap: 10px;
+        background-color: burlywood;
+        border: 15px solid burlywood;
+        margin: 5%;
+    }
+}
+
+.container > div {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+
+/* Logo and header */
+.container > .item-a {
+    height: 100px;
+}
+
+.item-a img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.item-a h1 {
+    position: relative;
+    bottom: 15px;
+    font-size: 62px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Menu */
+.item-b span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover span {
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+/* Text */
+.item-c p {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 27px;
+}
+
+
+/* Image */
+.item-d {
+    text-align: center;
+}
+
+.item-d #imgD{
+    width: auto;
+    height: auto;
+    border: 5px dashed burlywood;
+}
+
+
+/* Footer */
+.item-e {
+    text-align: center;
+}
